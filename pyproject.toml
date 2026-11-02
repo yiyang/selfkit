@@ -1,0 +1,23 @@
+[project]
+name = "selfkit"
+version = "0.1.0"
+description = "让 AI 记得自己是谁——把人格做成一组可加载的纯文本文件"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["ai", "memory", "persona", "context", "llm"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+selfkit = "selfkit:main"
+
+[tool.setuptools]
+py-modules = ["selfkit"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["templates/*.md", "templates/memory/*.md"]
